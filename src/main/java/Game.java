@@ -5,10 +5,8 @@ public class Game {
     private final int targetNumber;
     private int attemptsLeft;
     private int attempts;
-    private final Difficulty difficulty;
 
     public Game(Difficulty difficulty) {
-        this.difficulty = difficulty;
         this.targetNumber = new Random().nextInt(1, 101); // Generates a random number between 1 and 100
         this.attemptsLeft = difficulty.getChances();
     }
@@ -41,5 +39,9 @@ public class Game {
 
     public int getTargetNumber() {
         return targetNumber;
+    }
+
+    public int getAttempts() {
+        return attempts;
     }
 }

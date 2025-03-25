@@ -11,22 +11,22 @@ public class CLI {
         Difficulty difficulty = selectDifficulty();
         Game game = new Game(difficulty);
 
-        System.out.println("Great! You have selected the " + difficulty + " difficulty.");
+        System.out.println("Great! You have selected the " + difficulty + " difficulty.\n");
 
         while (game.hasAttemptsLeft()) {
             System.out.print("Enter your guess: ");
             int guess = scanner.nextInt();
 
             String feedback = game.makeGuess(guess);
-            System.out.println(feedback + "\n");
-
-            if (feedback.contains("Congratulations!")) {
-                System.out.println("Game Over! The number was " + game.getTargetNumber() + ".");
+            System.out.println(feedback);
+            if (guess != game.getTargetNumber()) {
+                System.out.println("Your Attempts: " + game.getAttempts() + " | " + "Attempts Left: " + game.getAttemptsLeft() + "\n");
+            } else {
                 return;
             }
         }
 
-
+        System.out.println("Game Over! The number was " + game.getTargetNumber() + ".");
 
     }
 

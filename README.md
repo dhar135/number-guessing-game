@@ -23,25 +23,52 @@ This is a console-based number guessing game where the player tries to guess a r
 
 ## How to Run
 
+### Option 1: Using the Script (Recommended)
+
 1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/number-guessing-game.git
+cd number-guessing-game
+```
+
+2. Make the script executable and run it:
+
+```bash
+chmod +x script.sh
+./script.sh
+```
+
+The script will automatically:
+
+- Clean up any existing compiled classes
+- Compile all Java files
+- Run the game
+
+### Option 2: Manual Compilation
+
+1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/number-guessing-game.git
 cd number-guessing-game
 ```
 
 2. Compile the Java files:
+
 ```bash
 javac src/main/java/*.java
 ```
 
 3. Run the game:
+
 ```bash
 java -cp src/main/java Main
 ```
 
 ## How to Play
 
-1. Launch the game using the commands above
+1. Launch the game using one of the methods above
 2. Select a difficulty level (1 for Easy, 2 for Medium, 3 for Hard)
 3. Enter your guess when prompted
 4. Receive feedback on whether your guess was too high or too low
@@ -57,6 +84,7 @@ src/main/java/
 ├── CLI.java          # Command-line interface implementation
 ├── Game.java         # Core game logic
 └── Difficulty.java   # Difficulty level enum
+script.sh            # Convenience script for building and running the game
 ```
 
 ## Contributing
