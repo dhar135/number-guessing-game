@@ -19,6 +19,4 @@ public enum Difficulty {
     public String getName() {
         return name;
     }
-
-    
 }

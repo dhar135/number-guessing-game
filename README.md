@@ -2,6 +2,8 @@
 
 A simple command-line number guessing game built in Java as part of the Roadmap.sh project.
 
+Project Link: [Number Guessing Game](https://roadmap.sh/projects/number-guessing-game)
+
 ## Description
 
 This is a console-based number guessing game where the player tries to guess a randomly generated number between 1 and 100. The game features three difficulty levels, each with a different number of attempts allowed.
