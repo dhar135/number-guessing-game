@@ -93,6 +93,11 @@ script.sh            # Convenience script for building and running the game
 
 Feel free to submit issues and enhancement requests!
 
+### Future Features
+
+- Implement a hint system that provides clues to the user if they are stuck.
+- Keep track of the user’s high score (i.e., the fewest number of attempts it took to guess the number under a specific difficulty level).
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
