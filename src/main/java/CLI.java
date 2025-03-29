@@ -19,7 +19,7 @@ public class CLI {
 
             while (game.hasAttemptsLeft()) {
 
-                System.out.print("Enter your guess: ");
+                System.out.print("Enter your guess: \n");
                 if (!scanner.hasNextInt()) {
                     System.out.println("Invalid input. Please enter a number between 1 and 100.");
                     scanner.nextLine();
@@ -38,9 +38,7 @@ public class CLI {
                     break;
                 }
             }
-
-            System.out.println("Game Over! The number was " + game.getTargetNumber() + ".");
-            System.out.println("Press Q if you would like to quit. Otherwise, press any key to play another round!\n");
+            System.out.println("Press Q if you would like to quit. Otherwise, press any key to play another round!");
 
             String response = scanner.nextLine();
             if (!response.equals("Q") && !response.equals("q")) {

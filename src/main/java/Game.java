@@ -5,11 +5,13 @@ public class Game {
     private final int targetNumber;
     private int attemptsLeft;
     private int attempts;
+    private final long startTime;
 
     public Game(Difficulty difficulty) {
         this.targetNumber = new Random().nextInt(1, 101); // Generates a random number between 1 and 100
         this.attemptsLeft = difficulty.getChances();
         this.attempts = 0;
+        this.startTime = System.currentTimeMillis();
     }
 
     public String makeGuess(int guess) {
@@ -20,7 +22,10 @@ public class Game {
         attempts++;
 
         if (guess == targetNumber) {
-            return "Congratulations! You guessed the correct number in " + attempts + " attempts!";
+            long endTime = System.currentTimeMillis();
+            // Calculate elapsed time in seconds
+            double elapsedTime = (endTime - startTime) / 1000.0;
+            return "Congratulations! You guessed the correct number " + targetNumber + " in " + attempts + " attempts!\n" + "Elapsed Time: " + elapsedTime + "s";
         } else if (guess > targetNumber) {
             return "Incorrect! The number is less than " + guess + ".";
         } else {
